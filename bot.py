@@ -22,6 +22,7 @@ class Maia(discord.Client):
         
         if message.content.startswith('!hello'):
             await message.channel.send('Hello {0.author.mention}'.format(message))
+            await user.send('World')
 
 client = Maia()
 client.run(Token)
