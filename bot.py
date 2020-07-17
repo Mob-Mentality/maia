@@ -17,12 +17,15 @@ class Maia(discord.Client):
         print('------')
 
     async def on_message(self, message):
+        # Verifies the bot ignores messages sent BY the bot.
         if message.author.id == self.user.id:
             return
         
-        if message.content.startswith('!hello'):
+        # Responds to the message "!test" with data about the message
+        if message.content.startswith('!test'):
             await message.channel.send('Hello {0.author.mention}'.format(message))
-            await user.send('World')
+            await message.channel.send('Message Author: {0.author}'.format(message))
+            await message.channel.send('Message Content: {0.content}'.format(message))
 
 client = Maia()
 client.run(Token)
