@@ -23,10 +23,15 @@ class Maia(discord.Client):
         
         # Responds to the message "!test" with data about the message
         if message.content.startswith('!test'):
-            await message.channel.send('Hello {0.author.mention}'.format(message))
-            await message.channel.send('Message Author: {0.author}'.format(message))
-            await message.channel.send('Message Content: {0.content}'.format(message))
+            await message.channel.send('Message tts: [0.tts}'.format(message))
+            await message.channel.send('Message type: [0.type}'.format(message))
+            await message.channel.send('Message author: [0.author}'.format(message))
+            await message.channel.send('Message content: [0.content}'.format(message))
+            await message.channel.send('Message nonce: [0.nonce}'.format(message))
+            await message.channel.send('Message embeds: [0.embeds}'.format(message))
+            await message.channel.send('Message channel: [0.channel}'.format(message))
+            await message.channel.send('Message call: [0.call}'.format(message))
+            await message.channel.send('Message mention_everyone: {0.mention_everyone}'.format(message))
 
 client = Maia()
 client.run(Token)
-
