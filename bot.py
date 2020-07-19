@@ -27,6 +27,7 @@ class Maia(discord.Client):
             await message.channel.send('Message type: {0.type}'.format(message))
             await message.channel.send('Message author: {0.author}'.format(message))
             await message.channel.send('Message content: {0.content}'.format(message))
+            await message.channel.send('Message length: {len(0.content)}'.format(message))
             await message.channel.send('Message nonce: {0.nonce}'.format(message))
             await message.channel.send('Message embeds: {0.embeds}'.format(message))
             await message.channel.send('Message channel: {0.channel}'.format(message))
