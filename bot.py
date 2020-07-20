@@ -42,6 +42,7 @@ class Maia(discord.Client):
             
         if message.content.startswith('!inventory'):
             
+            print(varH1)
             await message.channel.send('H1: {}'.format(varH1)
 
 client = Maia()
