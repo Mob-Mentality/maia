@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import time, random, traceback, os, json, datetime, discord, logging, asyncio
 from credentials import *
+# Add Events Functionality
+import events
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
@@ -44,6 +46,12 @@ class Maia(discord.Client):
             
             print(varH1)
             await message.channel.send('H1: {}'.format(varH1)
+
+        # Events Feature code
+        if message.content.startswith('!events'):
+            
+            print('!events called')
+            current_event()
 
 client = Maia()
 client.run(Token)
