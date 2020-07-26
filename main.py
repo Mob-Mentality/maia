@@ -39,7 +39,7 @@ class Maia(discord.Client):
         varMessageLength = len(message.content)
         varAnsatzDelta = varH1/20000
         
-        if varAnsatzDelta < 1
+        if varAnsatzDelta < 1:
             varAnsatzDelta = 0
         
         varH1 = varH1 + varMessageLength - 2*varAnsatzDelta
