@@ -47,8 +47,8 @@ class Maia(discord.Client):
                     
         if message.content.startswith('!inventory'):
             
-            print('H1: {}.format(varH1))
-            print('H2: {}.format(varH2))
+            print('H1: ', varH1)
+            print('H2: ', varH2)
             await message.channel.send('H1: {}'.format(varH1))
             await message.channel.send('H2: {}'.format(varH2))
         
