@@ -45,5 +45,7 @@ class Maia(discord.Client):
             print(varH1)
             await message.channel.send('H1: {}'.format(varH1)
 
+        # Add message parsing to recognize event commands
+
 client = Maia()
 client.run(Token)
