@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import time, random, traceback, os, json, datetime, discord, logging, asyncio
 from credentials import *
-#Add Events Feature
+# Add Events Feature
 import events
 
 logger = logging.getLogger('discord')
@@ -45,9 +45,9 @@ class Maia(discord.Client):
         if message.content.startswith('!inventory'):
             
             print(varH1)
-            await message.channel.send('H1: {}'.format(varH1)
+            await message.channel.send('H1: {}'.format(varH1))
 
-        #Events commands
+        # Events commands
         if message.content.startswith('!events'):
 
             print('Events Command called')
