@@ -11,18 +11,18 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 # Initializing variables
-varMessageLength = 0 # Used to store message length for later use.
-varH1 = 5700 # Ansatz - Proton inventory
-varH2 = 0 # Ansatz - Deuterium inventory
-varAnsatzDelta = 0 # Ansatz - Used to store Ansatz material consumed
+# varMessageLength = 0 # Used to store message length for later use.
+# varH1 = 5700 # Ansatz - Proton inventory
+# varH2 = 0 # Ansatz - Deuterium inventory
+# varAnsatzDelta = 0 # Ansatz - Used to store Ansatz material consumed
 
 class Maia(discord.Client):
 
     # globalize variables
-    global varMessageLength
-    global varH1
-    global varH2
-    global varAnsatzDelta
+#     global varMessageLength
+#     global varH1
+#     global varH2
+#     global varAnsatzDelta
     
     async def on_ready(self):
         print('Logged in as')
@@ -36,21 +36,21 @@ class Maia(discord.Client):
             return
         
         #Ansatz Processing
-        varMessageLength = len(message.content)
-        varAnsatzDelta = varH1/20000
+#         varMessageLength = len(message.content)
+#         varAnsatzDelta = varH1/20000
         
-        if varAnsatzDelta < 1:
-            varAnsatzDelta = 0
+#         if varAnsatzDelta < 1:
+#             varAnsatzDelta = 0
         
-        varH1 = varH1 + varMessageLength - 2*varAnsatzDelta
-        varH2 = varH2 + varAnsatzDelta
+#        varH1 = varH1 + varMessageLength - 2*varAnsatzDelta
+#        varH2 = varH2 + varAnsatzDelta
                     
-        if message.content.startswith('!inventory'):
+#        if message.content.startswith('!inventory'):
             
-            print('H1: ', varH1)
-            print('H2: ', varH2)
-            await message.channel.send('H1: {}'.format(varH1))
-            await message.channel.send('H2: {}'.format(varH2))
+#            print('H1: ', varH1)
+#            print('H2: ', varH2)
+#            await message.channel.send('H1: {}'.format(varH1))
+#            await message.channel.send('H2: {}'.format(varH2))
         
         # Responds to the message "!test" with data about the message
         if message.content.startswith('!test'):
@@ -69,7 +69,7 @@ class Maia(discord.Client):
         if message.content.startswith('!events'):
 
             print('Events Command called')
-            current_events()
+#            current_events()
 
 client = Maia()
 client.run(Token)
